@@ -4,8 +4,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.serialization.Serializable
 
-@Entity(tableName = "sections")
 @Serializable
+@Entity(tableName = "sections")
 data class Section(
     @PrimaryKey val uuid: String,
     val title: String,
