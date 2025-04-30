@@ -195,6 +195,9 @@
 			);
 			mainGroup = 65907C472DC27734006A7FEC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				65907C7E2DC277D1006A7FEC /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 65907C512DC27734006A7FEC /* Products */;
 			projectDirPath = "";
@@ -591,6 +594,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65907C7E2DC277D1006A7FEC /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 65907C482DC27734006A7FEC /* Project object */;
 }
