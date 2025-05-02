@@ -58,7 +58,6 @@ fun FieldItem(
                 field = field,
                 values = values
             )
-            //SimpleDropdownField(field = field, values = values)
         }
         "date" -> {
             DateField(
@@ -67,7 +66,7 @@ fun FieldItem(
             )
         }
         else -> {
-            // Qualquer outro tipo tratado como texto simples
+            // Any other type treated as plain text
             OutlinedTextField(
                 value = values[field.uuid].orEmpty(),
                 onValueChange = { values[field.uuid] = it },
