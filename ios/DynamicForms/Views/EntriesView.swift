@@ -45,14 +45,7 @@ struct EntriesView: View {
                         fields:   fields,
                         sections: sections
                     ) { newData in
-                        // callback de submit: insert directly into the list
-                        vm.entries.insert(
-                            FormEntry(
-                                jsonData:  newData,
-                                timestamp: Date()
-                            ),
-                            at: 0
-                        )
+                        vm.addEntry(jsonData: newData)
                     }
                 } label: {
                     Label("New Submission", systemImage: "plus.circle")
