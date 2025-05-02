@@ -27,69 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.cloudplusplus.dynamicforms.data.model.Field
 
-//import java.lang.reflect.Modifier
-
 @OptIn(ExperimentalMaterial3Api::class)
-//@Composable
-//fun SimpleDropdownField(
-//    field: Field,
-//    values: SnapshotStateMap<String, String>
-//) {
-//    Log.d("DEBUG", "SimpleDropdownField chamado para ${field.label}")
-//    val context = LocalContext.current               // ← pega o contexto aqui
-//    val options = field.options.orEmpty()
-//    var expanded by remember { mutableStateOf(false) }
-//    var selectedLabel by remember { mutableStateOf("") }
-//
-//    Box(
-//        modifier = Modifier
-//            .fillMaxWidth()
-//            .padding(vertical = 4.dp)
-//            .clickable {
-//                expanded = !expanded
-//                // usa a variável context, não LocalContext.current direto
-//                Toast.makeText(context,
-//                    "toggle expanded = $expanded",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
-//    ) {
-//        OutlinedTextField(
-//            value = selectedLabel,
-//            onValueChange = { /* readOnly */ },
-//            label = { Text(field.label) },
-//            trailingIcon = {
-//                Icon(
-//                    imageVector = if (expanded) Icons.Default.KeyboardArrowUp else Icons.Default.ArrowDropDown,
-//                    contentDescription = null
-//                )
-//            },
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .zIndex(1f), // garante que o menu fique sobre o TextField
-//            readOnly = true
-//        )
-//        DropdownMenu(
-//            expanded = expanded,
-//            onDismissRequest = { expanded = false },
-//            modifier = Modifier
-//                .fillMaxWidth()
-//        ) {
-//            options.forEach { option ->
-//                DropdownMenuItem(
-//                    text = { Text(option.label) },
-//                    onClick = {
-//                        values[field.uuid] = option.value
-//                        selectedLabel = option.label
-//                        expanded = false
-//                    },
-//                    modifier = Modifier.fillMaxWidth()
-//                )
-//            }
-//        }
-//    }
-//}
-
 @Composable
 fun DropdownField(
     field: Field,
@@ -100,10 +38,9 @@ fun DropdownField(
     var selectedLabel by remember { mutableStateOf("") }
 
     Box(modifier = Modifier.fillMaxWidth()) {
-        // OutlinedTextField clicável, readOnly
         OutlinedTextField(
             value = selectedLabel,
-            onValueChange = { /* não editável */ },
+            onValueChange = { /* not editable */ },
             readOnly = true,
             label = { BasicText(field.label) },
             trailingIcon = {
@@ -115,7 +52,7 @@ fun DropdownField(
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .clickable { expanded = true },  // abre o menu
+                .clickable { expanded = true },  // open menu
             interactionSource = remember { MutableInteractionSource() }
         )
 
