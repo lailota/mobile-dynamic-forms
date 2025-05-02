@@ -27,11 +27,11 @@ fun DateField(
     field: Field,
     values: SnapshotStateMap<String, String>
 ) {
-    var raw by rememberSaveable { mutableStateOf("") } // só dígitos
+    var raw by rememberSaveable { mutableStateOf("") } // only digits
     OutlinedTextField(
         value = raw,
         onValueChange = { new ->
-            // mantemos só dígitos e limitamos a 8 (ddMMyyyy)
+            // we keep only digits and limit it to 8 (ddMMyyyy)
             raw = new.filter { it.isDigit() }.take(8)
             values[field.uuid] = raw
         },
@@ -46,9 +46,9 @@ fun DateField(
 
 class DateVisualTransformation : VisualTransformation {
     override fun filter(text: AnnotatedString): TransformedText {
-        // Pegamos só até 8 dígitos (ddMMyyyy)
+        // We only accept up to 8 digits (ddMMyyyy)
         val digits = text.text.filter { it.isDigit() }.take(8)
-        // Inserimos as barras
+        // We insert the bars
         val formatted = buildString {
             digits.forEachIndexed { i, c ->
                 append(c)
@@ -57,7 +57,7 @@ class DateVisualTransformation : VisualTransformation {
         }
 
         val offsetTranslator = object : OffsetMapping {
-            // de original (sem barras) para transformado (com barras)
+            // from original (without bars) to transformed (with bars)
             override fun originalToTransformed(offset: Int): Int = when {
                 offset <= 1 -> offset
                 offset <= 3 -> offset + 1
@@ -65,7 +65,7 @@ class DateVisualTransformation : VisualTransformation {
                 else        -> formatted.length
             }
 
-            // de transformado (com barras) para original (sem barras)
+            // from transformed (with bars) to original (without bars)
             override fun transformedToOriginal(offset: Int): Int = when {
                 offset <= 2 -> offset
                 offset <= 5 -> offset - 1
