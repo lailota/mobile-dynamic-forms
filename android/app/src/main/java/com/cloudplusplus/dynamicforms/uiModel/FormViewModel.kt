@@ -33,7 +33,7 @@ class FormViewModel(
 
     init {
         viewModelScope.launch {
-            // 1) popula o DB, se ainda não tiver sido populado
+            // 1) populates the DB if it has not already been populated
             DataSeeder(
                 context = app,
                 assetFileName = assetFileName,
@@ -41,7 +41,7 @@ class FormViewModel(
                 sectionDao = sectionDao
             ).seedIfNeeded()
 
-            // 2) carrega do banco
+            // 2)charge from bank
             _fields.value = fieldDao.getAll()
             _sections.value = sectionDao.getAll()
         }
