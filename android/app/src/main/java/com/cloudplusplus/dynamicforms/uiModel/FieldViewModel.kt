@@ -21,12 +21,12 @@ class FieldViewModel(
 
     init {
         viewModelScope.launch {
-            // Lê o JSON do assets/<asset>
+            // Reads JSON from assets/<asset>
             val jsonText = app.assets.open(asset)
                 .bufferedReader()
                 .use { it.readText() }
 
-            // Extrai o array "fields" e desserializa
+            // Extract the "fields" array and deserialize it
             val root = Json.parseToJsonElement(jsonText).jsonObject
             val fieldsJson = root["fields"]!!
             val list: List<Field> = Json.decodeFromJsonElement(fieldsJson)
