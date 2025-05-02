@@ -45,7 +45,7 @@ struct EntriesView: View {
                         fields:   fields,
                         sections: sections
                     ) { newData in
-                        vm.addEntry(jsonData: newData)
+                        vm.add(jsonData: newData)
                     }
                 } label: {
                     Label("New Submission", systemImage: "plus.circle")

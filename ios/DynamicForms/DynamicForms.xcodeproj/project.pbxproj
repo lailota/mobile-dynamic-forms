@@ -6,6 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6590809C2DC5532A006A7FEC /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080982DC5532A006A7FEC /* FieldRow.swift */; };
+		6590809D2DC5532A006A7FEC /* EntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080942DC5532A006A7FEC /* EntriesViewModel.swift */; };
+		6590809E2DC5532A006A7FEC /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080922DC5532A006A7FEC /* Section.swift */; };
+		6590809F2DC5532A006A7FEC /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590809A2DC5532A006A7FEC /* LandingView.swift */; };
+		659080A02DC5532A006A7FEC /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080972DC5532A006A7FEC /* EntriesView.swift */; };
+		659080A12DC5532A006A7FEC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590808F2DC5532A006A7FEC /* Helpers.swift */; };
+		659080A22DC5532A006A7FEC /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080952DC5532A006A7FEC /* FormViewModel.swift */; };
+		659080A32DC5532A006A7FEC /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080912DC5532A006A7FEC /* Field.swift */; };
+		659080A42DC5532A006A7FEC /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080992DC5532A006A7FEC /* FormView.swift */; };
+		659080A92DC55342006A7FEC /* 200-form.json in Resources */ = {isa = PBXBuildFile; fileRef = 659080A52DC55342006A7FEC /* 200-form.json */; };
+		659080AA2DC55342006A7FEC /* all-fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 659080A62DC55342006A7FEC /* all-fields.json */; };
+		659080AB2DC55342006A7FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659080A72DC55342006A7FEC /* Assets.xcassets */; };
+		659080AD2DC5534D006A7FEC /* DynamicFormsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659080AC2DC5534D006A7FEC /* DynamicFormsApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		65907C622DC27736006A7FEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +43,22 @@
 		65907C502DC27734006A7FEC /* DynamicForms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicForms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65907C612DC27736006A7FEC /* DynamicFormsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicFormsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65907C6B2DC27736006A7FEC /* DynamicFormsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicFormsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6590808F2DC5532A006A7FEC /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		659080912DC5532A006A7FEC /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		659080922DC5532A006A7FEC /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		659080942DC5532A006A7FEC /* EntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesViewModel.swift; sourceTree = "<group>"; };
+		659080952DC5532A006A7FEC /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		659080972DC5532A006A7FEC /* EntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesView.swift; sourceTree = "<group>"; };
+		659080982DC5532A006A7FEC /* FieldRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldRow.swift; sourceTree = "<group>"; };
+		659080992DC5532A006A7FEC /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		6590809A2DC5532A006A7FEC /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		659080A52DC55342006A7FEC /* 200-form.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "200-form.json"; sourceTree = "<group>"; };
+		659080A62DC55342006A7FEC /* all-fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "all-fields.json"; sourceTree = "<group>"; };
+		659080A72DC55342006A7FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		659080AC2DC5534D006A7FEC /* DynamicFormsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		65907C522DC27734006A7FEC /* DynamicForms */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DynamicForms;
-			sourceTree = "<group>";
-		};
 		65907C642DC27736006A7FEC /* DynamicFormsTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = DynamicFormsTests;
@@ -75,7 +99,11 @@
 		65907C472DC27734006A7FEC = {
 			isa = PBXGroup;
 			children = (
-				65907C522DC27734006A7FEC /* DynamicForms */,
+				659080AC2DC5534D006A7FEC /* DynamicFormsApp.swift */,
+				659080A82DC55342006A7FEC /* Assets */,
+				659080932DC5532A006A7FEC /* Models */,
+				659080962DC5532A006A7FEC /* ViewModels */,
+				6590809B2DC5532A006A7FEC /* Views */,
 				65907C642DC27736006A7FEC /* DynamicFormsTests */,
 				65907C6E2DC27736006A7FEC /* DynamicFormsUITests */,
 				65907C512DC27734006A7FEC /* Products */,
@@ -92,6 +120,54 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		659080902DC5532A006A7FEC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6590808F2DC5532A006A7FEC /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		659080932DC5532A006A7FEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				659080902DC5532A006A7FEC /* Helpers */,
+				659080912DC5532A006A7FEC /* Field.swift */,
+				659080922DC5532A006A7FEC /* Section.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		659080962DC5532A006A7FEC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				659080942DC5532A006A7FEC /* EntriesViewModel.swift */,
+				659080952DC5532A006A7FEC /* FormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6590809B2DC5532A006A7FEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				659080972DC5532A006A7FEC /* EntriesView.swift */,
+				659080982DC5532A006A7FEC /* FieldRow.swift */,
+				659080992DC5532A006A7FEC /* FormView.swift */,
+				6590809A2DC5532A006A7FEC /* LandingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		659080A82DC55342006A7FEC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				659080A52DC55342006A7FEC /* 200-form.json */,
+				659080A62DC55342006A7FEC /* all-fields.json */,
+				659080A72DC55342006A7FEC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +182,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				65907C522DC27734006A7FEC /* DynamicForms */,
 			);
 			name = DynamicForms;
 			packageProductDependencies = (
@@ -215,6 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659080A92DC55342006A7FEC /* 200-form.json in Resources */,
+				659080AA2DC55342006A7FEC /* all-fields.json in Resources */,
+				659080AB2DC55342006A7FEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6590809C2DC5532A006A7FEC /* FieldRow.swift in Sources */,
+				659080AD2DC5534D006A7FEC /* DynamicFormsApp.swift in Sources */,
+				6590809D2DC5532A006A7FEC /* EntriesViewModel.swift in Sources */,
+				6590809E2DC5532A006A7FEC /* Section.swift in Sources */,
+				6590809F2DC5532A006A7FEC /* LandingView.swift in Sources */,
+				659080A02DC5532A006A7FEC /* EntriesView.swift in Sources */,
+				659080A12DC5532A006A7FEC /* Helpers.swift in Sources */,
+				659080A22DC5532A006A7FEC /* FormViewModel.swift in Sources */,
+				659080A32DC5532A006A7FEC /* Field.swift in Sources */,
+				659080A42DC5532A006A7FEC /* FormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,10 +477,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DynamicForms/DynamicForms.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DynamicForms.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DynamicForms/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RXX9LC545Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -430,10 +516,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DynamicForms/DynamicForms.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DynamicForms.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DynamicForms/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RXX9LC545Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;

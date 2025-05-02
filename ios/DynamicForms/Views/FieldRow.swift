@@ -5,6 +5,7 @@
 //  Created by Laila Guzzon Hussein on 30/04/25.
 //
 
+import Foundation
 import SwiftUI
 
 // MARK: - Helpers
@@ -13,7 +14,7 @@ extension AttributedString {
     init?(html: String) {
         guard
             let data = html.data(using: .utf8),
-            let attr = try? NSMutableAttributedString(
+            let mutable = try? NSMutableAttributedString(
                 data: data,
                 options: [
                     .documentType: NSAttributedString.DocumentType.html,
@@ -22,19 +23,20 @@ extension AttributedString {
                 documentAttributes: nil
             )
         else { return nil }
-        self.init(attr)
+        self.init(mutable)
     }
 }
 
 struct HTMLText: View {
     let html: String
+
     var body: some View {
-        if let attr = AttributedString(html: html) {
-            Text(attr)
-                .font(.body)
+        // try using the above initializer
+        if let attrStr = AttributedString(html: html) {
+            Text(attrStr)
         } else {
+            // fallback
             Text(html)
-                .font(.body)
         }
     }
 }

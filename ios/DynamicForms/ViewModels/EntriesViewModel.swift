@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct FormEntry: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     let jsonData: [String:String]
     let timestamp: Date
 
