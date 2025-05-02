@@ -19,7 +19,7 @@ data class Field(
     val name: String,
     val required: Boolean = false,
 
-    // para dropdown (e para tratar outros tipos como texto)
+    // for dropdown (and to treat other types as text)
     @TypeConverters(Converters::class)
     val options: List<Option>? = null
 )
