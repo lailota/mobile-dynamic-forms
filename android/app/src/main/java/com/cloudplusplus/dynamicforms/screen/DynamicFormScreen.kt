@@ -41,7 +41,7 @@ fun DynamicFormScreen(
     modifier: Modifier = Modifier,
     onFormSubmitted: () -> Unit
 ) {
-    // Contexto e CoroutineScope para operações de I/O
+    // Context and CoroutineScope for I/O operations
     val context = LocalContext.current
     val scope   = rememberCoroutineScope()
 
@@ -50,7 +50,7 @@ fun DynamicFormScreen(
             .padding(16.dp)
     ) {
         sections.forEach { section ->
-            // 2) cabeçalho de cada seção
+            // 2) header of each section
             item {
                 BasicText(
                     text = HtmlCompat
@@ -63,7 +63,7 @@ fun DynamicFormScreen(
                 )
             }
 
-            // 3) campos daquela seção
+            // 3) fields in that section
             val slice = fields.subList(section.from, section.to + 1)
             items(slice, key = { it.uuid }) { field ->
                 FieldItem(field = field, values = values)
@@ -71,13 +71,13 @@ fun DynamicFormScreen(
             }
         }
 
-        // 4) botão de envio
+        // 4) submit button
         item {
             Spacer(modifier = Modifier.height(16.dp))
             Button(
                 onClick = {
                     scope.launch {
-                        // serializa para JSON e salva no DB
+                        // serializes to JSON and saves to DB
                         val json = Json.encodeToString(values.toMap())
                         val db   = AppDatabaseHolder.getInstance(context)
                         db.formEntryDao().insert(
@@ -87,7 +87,7 @@ fun DynamicFormScreen(
                                 timestamp     = System.currentTimeMillis()
                             )
                         )
-                        // notifica quem chamou
+                        // notifies who called
                         onFormSubmitted()
                     }
                 },
