@@ -18,6 +18,6 @@ val MIGRATION_1_2 = object : Migration(1, 2) {
 
 val MIGRATION_2_3 = object : Migration(2, 3) {
     override fun migrate(db: SupportSQLiteDatabase) {
-        // aqui as alterações de esquema de v2 para v3
+        // schema changes from v2 to v3
     }
 }
