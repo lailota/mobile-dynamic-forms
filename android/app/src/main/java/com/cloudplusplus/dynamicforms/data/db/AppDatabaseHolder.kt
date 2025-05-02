@@ -18,7 +18,7 @@ object AppDatabaseHolder {
             "dynamic_forms.db"
         )
             .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
-            .fallbackToDestructiveMigration() // opcional, destrói o DB em caso de mismatch
+            .fallbackToDestructiveMigration() // optional, destroys the DB in case of mismatch
             .build()
 }
 
