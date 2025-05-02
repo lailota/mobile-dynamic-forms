@@ -42,14 +42,14 @@ fun EntriesScreen(
 ) {
     val context = LocalContext.current
 
-    // 1) Estado para mapear uuid → label
+    // 1) State to map uuid → label
     val fieldLabels by produceState(
-        initialValue = emptyMap<String, String>(),    // precisa disso
-        key1 = context                                 // recomputa se context mudar
+        initialValue = emptyMap<String, String>(),
+        key1 = context                                
     ) {
         val dao    = AppDatabaseHolder.getInstance(context).fieldDao()
-        val fields = dao.getAll()                     // suspensa
-        value = fields.associate { it.uuid to it.label }  // atribui aqui
+        val fields = dao.getAll()                    
+        value = fields.associate { it.uuid to it.label }
     }
 
     Scaffold(
@@ -66,14 +66,14 @@ fun EntriesScreen(
     ) { padding ->
         LazyColumn(Modifier.padding(padding)) {
             items(entries) { entry ->
-                // 2) Parse do jsonData
+                // 2) Parse to jsonData
                 val dataMap: Map<String, String> = remember(entry.jsonData) {
                     runCatching {
                         Json.decodeFromString<Map<String, String>>(entry.jsonData)
                     }.getOrDefault(emptyMap())
                 }
 
-                // 3) Exibe cada par uuid→valor como “Label: Valor”
+                // 3) Display each uuid→value pair as “Label:Value”
                 Column(Modifier
                     .fillMaxWidth()
                     .clickable { onEntryClick(entry) }
